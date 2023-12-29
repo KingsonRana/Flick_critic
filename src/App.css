@@ -1,38 +1,349 @@
-.App {
-  text-align: center;
+body{
+  background-image: url('./bg.jpg');
+  background-size: cover;
+  background-position: center;
+  overflow-y: auto;
+  height: 100vh;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.App{
+  background: linear-gradient(181deg, rgba(2, 0, 97,0.2) 15%, rgb(97, 149, 219,0.3) 158.5%);
   color: white;
 }
+.gradient-text {
+  /* Fallback: Set a background color. */
+  background-color: red;
+  
+  /* Create the gradient. */
+  background-image: linear-gradient(45deg, #f3ec78, #af4261);
+  
+  /* Set the background size and repeat properties. */
+  background-size: 100%;
+  background-repeat: repeat;
 
-.App-link {
-  color: #61dafb;
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  font-size: large;
+  font-weight: 900;
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.movie-list-container {
+  width: 100%;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  /* white-space: nowrap; Prevent movies from wrapping */
+}
+.popularMovieList{
+
+  width: 70%;
+
+  background: linear-gradient(181deg, rgba(2, 0, 97,0.2) 15%, rgb(97, 149, 219,0.3) 158.5%);
+  
+}
+.popularMovieList .movie-list{
+  height: 100%;
+}
+.popularMovie{
+  width: 65vw;
+  height: 31.5rem;
+  margin: 12px;
+  margin-right: 0px;
+  transition: transform 0.3s ease-in-out;
+  border: none;
+}
+::-webkit-scrollbar {
+  width: 0;
+}
+.season::-webkit-scrollbar {
+  width: 3px; /* Set the width of the overridden scrollbar */
+  
+}
+.season::-webkit-scrollbar-thumb {
+  background-color: #888; 
+  border-radius: 5px; 
+  height: 2px;
+}
+
+.horizontal-scrollbar::-webkit-scrollbar {
+  height: 3px; 
+  background-color: #f1f1f1; 
+}
+
+/* Style the horizontal scrollbar thumb */
+.horizontal-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 5px; 
+}
+.movie-list {
+  display: inline-flex; 
+  padding: 5px;
+}
+.movie {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  /* background-color: rgba(29, 8, 8, 0.5); */
+  
+}
+.trending{
+  background-color: rgba(255, 255,255,0.1);
+}
+
+.movie h3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  color: white;
+}
+.movieParent.upComing{
+  width: 19rem;
+  height: 13rem;
+}
+.UpComingDiv{
+  width: 96%;
+  border-radius: 5px;
+  margin: auto;
+  margin-bottom: 2px;
+
+}
+.translate-middle {
+  transform: translate(-92%,-50%)!important;
+}
+.translate-middle.popular  {
+  transform: translate(-135%,-50%)!important;
+}
+
+.movieParent {
+  width: 14rem;
+  height: 18rem;
+  margin: 5px;
+  margin-top: 5px;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 2px 2px 3px 0pX black;
+  border-radius: 2px;
+}
+
+
+.navBar {
+  background-color:rgb(2, 2, 2);
+  color: white;
+}
+.popularContainer{
+  display: flex;
+  
+}
+.popularContainerH2 {
+  display: flex;
+  align-items: center;
+  width: 35%;
+  background: linear-gradient(181deg, rgba(2, 0, 97, 0.2) 15%, rgba(97, 149, 219, 0.3) 158.5%);
+  padding: 10px; /* Add padding for spacing */
+}
+
+.popularContainerH2 p {
+  background-image: linear-gradient(60deg, #E21143, #FFB03A);
+  background-clip: text;
+  -webkit-background-clip: text; /* For Safari support */
+  color: transparent;
+  text-overflow: ellipsis;
+  font-size: 1.7rem;
+  line-height: 1.5; 
+}
+.searchP{
+  font-Size: 0.8rem;
+            font-Weight: 300;
+            font-Style: italic;
+            opacity: .7;
+            color: black;
+            text-Overflow: ellipsis;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 6;
+}
+
+.movie2{
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(0,0,10,0.7);
+}
+.movie3{
+ margin: 25px;
+ border-radius: 10px;
+}
+.movieTvBasic{
+  padding: 5px;
+  width: 75%;
+  margin: 25px;
+}
+.overViewSection{
+  overflow-y: scroll;
+  height: 110px;
+}
+.searchMain{
+  display: flex;
+  padding: 5px;
+  padding-top: 60px;
+}
+.searchResult{
+  width: 18rem;
+  margin: 14px;
+}
+.searchDisplay{
+  margin: 13px;
+  overflow-y: auto;
+  height:84vh;
+  width: 100%;
+  background: white;
+  border-radius: 8px;
+  padding: 2px;
+}
+.seriesSeason{
+  display: flex;
+}
+
+
+.cardContainer{
+  margin: 10px;
+}
+.child1{
+  width: 22%;
+}
+.child2{
+  width: 78%;
+}
+.dataName p{
+ font-size: 12px;
+ text-align: center;
+ word-wrap: break-word;
+}
+.upComing{
+  flex-direction: row;
+  height: 30rem;
+}
+.upComing1{
+  flex: 1.7;
+
+}
+.upComing2{
+  flex: 1;
+  
+}
+.searchBox{
+ margin-left: 66%;
+}
+.profileImage{
+  width: 11rem;
+  height: 13rem;
+}
+
+.movie5C{
+ margin: 10px;
+ margin-bottom: 0px;
+ overflow-x: auto;
+}
+@media only screen and (max-width: 500px) {
+  .movie5C{
+    margin: 0px;
+    margin-top: 10px;
+   }
+  .profileImage{
+    width: 24rem;
+    height: 10rem;
   }
-  to {
-    transform: rotate(360deg);
+  .searchBox{
+    margin-top: 10px;
+    margin-left: 0%;
+   }
+ .dataName p{
+  width: 100%;
+ font-size: 12px;
+ text-align: center;
+ word-wrap: break-word;
+}
+.upComing{
+  flex-direction: column;
+  height: 32rem;
+}
+.upComing1{
+  flex: 1;
+  margin-bottom: 2px;
+}
+.upComing2{
+  flex: 1;
+}
+
+  .movie2{
+    flex-direction: column;
+   
+  }
+  .movie3{
+    margin: 0px;
+    border-radius: 0px;
+   }
+   .movieTvBasic{
+    width: 100%;
+    margin: 0px;
+  }
+  .overViewSection{
+    overflow-y: none;
+    height: fit-content;
+  }
+  .searchMain{
+    flex-direction: column;
+  }
+  .searchResult{
+    width: 100%;
+    margin: 0;
+    margin-bottom: 4px;
+  }
+  .searchDisplay{
+    margin: 0;
+    overflow-y: auto;
+    height:65.5vh;
+    background: white;
+    border-radius: 8px;
+    padding: 2px;
+  }
+  .popularContainer{
+    flex-direction: column;
+  }
+  .popularMovie{
+    width: 98%;  
+    margin: 5px;
+    margin-top: 10px;
+  
+  }
+  .popularMovieList{
+    width: 100%;
+  }
+  
+  .popularContainerH2 {
+    width: 100%;
+  }
+  .movie-list{
+    padding-top: 6px;
+    padding: 0px;
+  }
+  .movieParent{
+    width: 8rem;
+    height: 11rem;
+    margin-top: 12px;
+  }
+  .cardContainer{
+    margin: 0px;
+  }
+  .seriesSeason{
+   flex-direction: column;
+  }
+  .child1{
+    width: 100%;
+  }
+  .child2{
+    width: 100%;
   }
 }
+
