@@ -65,6 +65,7 @@ export default function SearchListMovie() {
  
       const response3 = await fetch(url3, options3);
       let tv = await response3.json();
+      console.log(tv)
      settPage(1)
       // person
 
@@ -331,7 +332,7 @@ export default function SearchListMovie() {
                 <div
                   style={{ cursor: "pointer" }}
                   onClick={() => {
-                    navigate(`/movieDetail/${data.id}`);
+                    navigate(`/TvDetail/${data.id}`);
                   }}
                 >
                   {

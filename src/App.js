@@ -18,7 +18,7 @@ import Collection from "./components/Collection";
 import PeopleDetail from "./components/PeopleDetail";
 
 function App() {
-  const { upComingCover } = useContext(states);
+  // const { upComingCover } = useContext(states);
 
   return (
     <div className="App">

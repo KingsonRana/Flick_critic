@@ -59,22 +59,21 @@ export default function Home() {
               functionality. If you found value in this project or have any
               feedback, I invite you to reach out to me. I am readily available
               for communication and open to discussions. You can contact me via
-              email, LinkedIn, or Instagram, utilizing the provided links below.
-              Your support and feedback are highly appreciated and contribute
+              LinkedIn. Your support and feedback are highly appreciated and contribute
               immensely to the continual improvement and refinement of this
               project. Thank you once again to "The Movie Database" for their
               pivotal role in making this project possible.
             </p>
           </div>
           <div className="mx-3" style={{ color: "white" }}>
-            Social Media{" "}
-            <a
+         
+            {/* <a
               href="https://www.instagram.com/kingson_rana07/?next=https%3A%2F%2Fwww.instagram.com%2Faccounts%2Fedit%2F%3F__coig_login%3D1"
               target="_blank"
               style={{ color: "white", textDecoration: "none" }}
             >
               <FontAwesomeIcon icon={faSquareInstagram} className="mx-3" />
-            </a>
+            </a> */}
             {/* <a
                href={`mailto:kingson7075@gmail.com`}
               target="_blank"
